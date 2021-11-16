@@ -1,0 +1,528 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font: 400 102% "Oswald", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #4c5b61;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+button:focus {
+  border: none;
+  outline: none;
+}
+
+header {
+  width: 100%;
+  padding: 0.7rem 0;
+  min-height: 7vmin;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 2;
+  background-color: #fffdfd;
+  -webkit-backdrop-filter: blur(2rem);
+          backdrop-filter: blur(2rem);
+  border-bottom: 2px solid #fffdfd;
+  -webkit-box-shadow: 0px 0px 1em #4c5b61b3;
+          box-shadow: 0px 0px 1em #4c5b61b3;
+}
+
+header #branding {
+  position: relative;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  text-align: center;
+  -webkit-box-shadow: 0rem 0rem 2rem #4c5b61b3;
+          box-shadow: 0rem 0rem 2rem #4c5b61b3;
+}
+
+header #branding strong {
+  padding: 0.2vw 0.5rem;
+  display: block;
+  font-size: 2.8vmin;
+  letter-spacing: 0.6vw;
+  font-weight: 300;
+  color: #4c5b61;
+  background-color: #fffdfd;
+}
+
+header #branding small {
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  font-size: 2vmin;
+  letter-spacing: 0.4vw;
+  color: #4c5b61;
+}
+
+footer {
+  width: 100%;
+  background-color: #cbd2d0;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 3vmin;
+  color: #4c5b61;
+}
+
+main {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #cbd2d0;
+}
+
+main h2 {
+  text-align: center;
+  letter-spacing: 7px;
+  background-color: #fffdfd;
+  color: #4c5b61;
+  font-size: 5vmin;
+  padding: 5px 0;
+  -webkit-box-shadow: 0 0 1em 0.2em #4c5b6134;
+          box-shadow: 0 0 1em 0.2em #4c5b6134;
+}
+
+main #steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7d7e7a;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+}
+
+main #steps .active-step {
+  color: #4c5b61;
+}
+
+main #steps div {
+  margin: 50px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #steps span.left::before {
+  left: 0%;
+}
+
+main #steps span.right::before {
+  left: 100%;
+}
+
+main #steps span {
+  width: 35%;
+  height: 2px;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #7d7e7a;
+  position: absolute;
+  right: 0;
+}
+
+main #steps span::before {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  content: "";
+  width: 10px;
+  height: 10px;
+  top: 60%;
+  left: 0%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #4c5b61;
+  position: absolute;
+  border-radius: 50%;
+}
+
+main form {
+  display: none;
+}
+
+main form input[type="number"] {
+  position: relative;
+}
+
+main form input[type="number"]::-webkit-inner-spin-button, main form input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+  -webkit-appearance: inner-spin-button !important;
+  width: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+main #message-confirmation {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  letter-spacing: 1.5px;
+  margin-top: 2em;
+}
+
+main #message-confirmation #message {
+  color: #fffdfd;
+  background-color: #4c5b61;
+  padding: 5px 20px;
+}
+
+main #message-confirmation #detail {
+  font-weight: 300;
+  font-size: 1em;
+  color: #4c5b61;
+}
+
+main .success-confirmation #message {
+  background-color: #2ecc71;
+  color: #4c5b61;
+}
+
+main .error-confirmation #message {
+  background-color: #e74c3c;
+  color: #cbd2d0;
+}
+
+main .current-step {
+  background-color: #fffdfd;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  min-height: 60vh;
+  margin: 2em 3vw 2em 3vw;
+  padding: 15px 2vmax;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  letter-spacing: 2px;
+  -webkit-box-shadow: 0px 0px 1em #4c5b6134;
+          box-shadow: 0px 0px 1em #4c5b6134;
+  color: #4c5b61;
+}
+
+main .current-step button {
+  border: 3px solid #cbd2d0;
+  padding: 3px 15px;
+  outline: 0px solid #4c5b61;
+  color: #4c5b61;
+  margin-top: 2em;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+main .current-step button:hover, main .current-step button:focus {
+  background-color: #cbd2d0;
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+  outline: 5px solid #4c5b61;
+}
+
+main .current-step span {
+  position: absolute;
+  bottom: -20px;
+  color: #e74c3c;
+  font-size: 14px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+main .current-step label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+main .current-step input,
+main .current-step textarea {
+  border: none;
+  outline: none;
+}
+
+main .current-step input:focus,
+main .current-step textarea:focus {
+  border: none;
+}
+
+main .current-step > label input,
+main .current-step > label textarea {
+  width: 94%;
+  background-color: #cbd2d0;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 7px 15px;
+  color: #4c5b61;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+main .current-step > label input:focus, main .current-step > label input:hover,
+main .current-step > label textarea:focus,
+main .current-step > label textarea:hover {
+  -webkit-box-shadow: 0 -1px 0px 0px #4c5b61;
+          box-shadow: 0 -1px 0px 0px #4c5b61;
+  background-color: #cbd2d0cc;
+  outline: none;
+}
+
+main .current-step > label input:focus ~ .hover, main .current-step > label input:hover ~ .hover,
+main .current-step > label textarea:focus ~ .hover,
+main .current-step > label textarea:hover ~ .hover {
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+}
+
+main .current-step > label strong {
+  letter-spacing: 1.5px;
+  color: #4c5b61;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: 3px;
+}
+
+main #query-details.current-step small {
+  display: none;
+}
+
+main #query-details.current-step > label {
+  max-width: 100%;
+  min-width: 60%;
+}
+
+main #query-details.current-step > label #message {
+  max-width: 100%;
+  min-width: 20%;
+  min-height: 45px;
+  resize: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  overflow-y: hidden;
+}
+
+main #query-details.current-step > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #query-details.current-step > div span {
+  bottom: -15px;
+}
+
+main #query-details.current-step > div p {
+  text-align: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+main #query-details.current-step > div label {
+  width: 80px;
+  text-align: center;
+  margin: 10px 30px;
+}
+
+main #query-details.current-step > div label input {
+  max-width: 80px;
+  padding: 3px 5px 3px 12px;
+  background-color: #cbd2d0;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  color: #4c5b61;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+main #query-details.current-step > div label input:focus, main #query-details.current-step > div label input:hover {
+  background-color: #cbd2d0cc;
+  outline: none;
+}
+
+main #query-details.current-step > div label::after {
+  content: "ft";
+  position: absolute;
+  right: -25px;
+  bottom: 0px;
+  color: #7d7e7a;
+}
+
+main #phone {
+  text-indent: 2em;
+}
+
+main #phone ~ small {
+  position: absolute;
+  color: #4c5b61;
+  left: 5px;
+  bottom: 8.5px;
+}
+
+main .fa-info-circle {
+  font-size: 14px;
+  top: 10px;
+  position: absolute;
+  right: 0;
+}
+
+main .hover {
+  position: absolute;
+  right: 20px;
+  color: #4c5b61;
+  bottom: 11px;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+main #personal-info.current-step {
+  padding: 15px 12vmax;
+}
+
+main #personal-info.current-step > label {
+  width: 130%;
+}
+
+main #contact-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 1.5px;
+}
+
+main #contact-details h3 {
+  font-size: 24px;
+  color: #4c5b61;
+  letter-spacing: 4px;
+}
+
+main #contact-details div {
+  padding: 20px 2vw;
+  margin-top: 30px;
+  background-color: #fffdfd;
+  color: #7d7e7a;
+  padding: 0 25px;
+}
+
+main #contact-details div * {
+  letter-spacing: 2.4px;
+}
+
+main #contact-details div h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 3vmax 0;
+}
+
+main #contact-details div h4 strong {
+  font-weight: 300;
+  color: #4c5b61;
+}
+
+main .active {
+  -webkit-transform: translateY(-245%) !important;
+          transform: translateY(-245%) !important;
+}
+
+main .success {
+  border-bottom: 2px solid #2ecc71 !important;
+}
+
+main .error {
+  border-bottom: 2px solid #e74c3c !important;
+}
+/*# sourceMappingURL=order.css.map */
